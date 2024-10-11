@@ -1,6 +1,7 @@
 "use strict";
 
-const utils = require("@iobroker/adapter-core");
+// const utils = require("@iobroker/adapter-core");
+const utils = require("./FakeAdapter");
 
 const axios = require("axios");
 const crypto = require("crypto");
@@ -1369,7 +1370,9 @@ class Roborock extends utils.Adapter {
 				} else if (command == "startProgram") {
 					this.executeScene(state);
 				} else if (typeof state.val != "boolean") {
-					this.vacuums[duid].command(duid, command, state.val);
+					if (this.vacuums[duid]) {
+						this.vacuums[duid].command(duid, command, state.val);
+					}
 				}
 
 				if (typeof state.val == "boolean") {
