@@ -153,8 +153,9 @@ class FakeAdapter extends EventEmitter {
 
     this.states[id] = state;
 
+    this.publishMqtt(id, state, 'states');
+    
     if (JSON.stringify(oldState) !== JSON.stringify(state)) {
-      this.publishMqtt(id, state, 'states');
 
       if (id == "clientID") {
         await this._writeStatestoFile();
