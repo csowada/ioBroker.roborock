@@ -91,9 +91,9 @@ class FakeAdapter extends EventEmitter {
       that.log.info('Local mqqt client connected!');
 
       Object.entries(that.objects).forEach(([id, obj]) => {
-        if (!id.endsWith('.map.mapData') && !id.endsWith('.map.mapBase64Truncated') && !id.endsWith('.map.mapBase64')) {
+        // if (!id.endsWith('.map.mapData') && !id.endsWith('.map.mapBase64Truncated') && !id.endsWith('.map.mapBase64')) {
           that.publishMqtt(id, obj, 'objects');
-        }
+        // }
       });
 
       Object.entries(that.states).forEach(([id, state]) => {
