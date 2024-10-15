@@ -187,10 +187,11 @@ class FakeAdapter extends EventEmitter {
   }
 
   async setStateChangedAsync(id, state) {
-    console.log(`setStateChangedAsync('${id}', '${JSON.stringify(state)}')`);
-    if (JSON.stringify(this.states[id]) !== JSON.stringify(state)) {
-      await this.setStateAsync(id, state);
-    }
+    // console.log(`setStateChangedAsync('${id}', '${JSON.stringify(state)}')`);
+    // if (JSON.stringify(this.states[id]) !== JSON.stringify(state)) {
+    //  await this.setStateAsync(id, state);
+    // }
+    await this.setStateAsync(id, state);
   }
 
   supportsFeature(featureName) {
