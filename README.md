@@ -18,6 +18,8 @@ This adapter allows you the control, get states, cleaning history and view the m
 
 **This adapter uses Sentry libraries to automatically report exceptions and code errors to the developers.** For more details and for information how to disable the error reporting see [Sentry-Plugin Documentation](https://github.com/ioBroker/plugin-sentry#plugin-sentry)! Sentry reporting is used starting with js-controller 3.0.
 
+### This adapter cannot work on on MacOS
+
 ## The supported robots are:
 
 - Roborock S4
@@ -55,6 +57,14 @@ This feature only works when map creation is enabled in the adapter options!
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+ * (copystring) Add cleaned_area to S8
+ * (copystring) Bugfixes for Qrevo Curve
+ * (copystring) Fix reset of consumables
+ * (copystring) Fix io-package.json
+ * (copystring) Add Roborock Qrevo Master
+ * (copystring) Refactor login api and renew login every 12 hours
+
 ### 0.6.17 (2024-10-14)
  * (copystring) Add some missing attributes
  * (copystring) Change min of update interval to 60s to prevent issues
